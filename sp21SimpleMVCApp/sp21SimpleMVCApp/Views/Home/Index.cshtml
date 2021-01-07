@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+
+<span class="text-danger">@ViewBag.ErrorMessage</span>
+<h2>Convert Your Grade</h2>
+
+<form asp-action="Calculate" method="get">
+    <p class="form-group">
+        <label>Enter the student's name:</label>
+        <input type="text" name="strName" class="form-control" /><br />
+    </p>
+    <p class="form-group">
+        <label>Enter the student's grade:</label>
+        <input type="text" name="strGrade" class="form-control" /><br />
+    </p>
+
+    <button type="submit" class="btn btn-success">Calculate</button>
+</form>

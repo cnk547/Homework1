@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <!--This is the code that changes the text on your browser tab-->
+    <title>@ViewBag.Title</title>
+
+
+    <!--This is the link to the stylesheet for bootstrap-->
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!--Navbar Code-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Body of View goes here-->
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <!--This code references scripts to make your page responsive-->
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/popper/popper.js/popper.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
